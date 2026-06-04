@@ -1,0 +1,25 @@
+import random
+
+number = random.randint(1, 100)
+attempts = 0
+
+print("====================")
+print("  GUESSING GAME!   ")
+print("====================")
+print("I picked a number between 1 and 100")
+print("")
+
+while True:
+    guess = int(input("enter your guess😉 "))
+    attempts = attempts + 1
+    print("")
+
+    if guess < number:
+        print("Too low! Try higher")
+    elif guess > number:
+        print("Too high! Try lower")
+    else:
+        print("👏 Correct! You got it in " + str(attempts) + " attempts!")
+        break
+
+    print("")
